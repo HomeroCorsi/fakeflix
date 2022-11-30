@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-size: 1.6rem;
+    background-color: var(--color-background);
+    color: var(--color-white);
+  }
+  
+  .mySwiper {
+    /* z-index: 999; */
+    overflow: visible !important ;
+  }
+  
+  :root {
+    --color-red: #db0000;
+    --color-red-disabled: #831010;
+    --color-black: #000;
+    --color-background: #161616;
+    --color-white: #fff;
+  }
