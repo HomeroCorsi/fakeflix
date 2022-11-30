@@ -89,7 +89,8 @@ const bottomDiv = {
   width: '95%',
   background: 'black',
   marginTop: '5rem',
-  marginLeft: '0.75rem'
+  marginLeft: '0.75rem',
+  zIndex: '999 !important',
 }
 
 const netflixPlayButtonStyle = {

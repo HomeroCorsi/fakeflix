@@ -12,7 +12,7 @@ import getTopRatedSeries from "../features/series/utils/getTopRatedSeries";
 // import { AuthContext } from "../context/AuthContext";
 // import { useContext } from "react";
 import NavBar from "../components/navBar/NavBar";
-
+import './Browse.module.css'
 
 const Browse = () => {
   const { data : popularMovies} = useFetch(getPopularMovies);
@@ -26,10 +26,15 @@ const Browse = () => {
 //   const { isAuth, login, logout } = useAuth();
 //   console.log(isAuth, login, logout);
 
-  // const {isAuth, user} = useContext(AuthContext)
-    // console.log(isAuth, user.email);
-    // console.log('https://api.themoviedb.org/3/genre/movie/list?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US')
-    // console.log(' https://api.themoviedb.org/3/genre/tv/list?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US')
+  
+ /*  const [movie, setMovie] = useState<Movie | null>(null)
+  useEffect(() => {
+    setMovie(
+      netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)]
+    );
+  }, [netflixOriginals]); */
+  
+  /* Hace un useEffect que cambie de valor del array aleatoriamente */
 
 
   return (
@@ -49,9 +54,9 @@ const Browse = () => {
 };
 
 const titleStyle = {
-    color: "white",
-    fontSize: "4rem",
-    padding: '2rem'
+  color: "white",
+  fontSize: "50px",
+  padding: '2rem'
   };
 
 

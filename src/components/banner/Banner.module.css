@@ -1,0 +1,100 @@
+.bannerprincipal{
+    
+    height: 80vh;
+    /* background-image: `url(${item?.backdrop})`; */
+    background-size: cover;
+    box-shadow: 10px 5px 5px black;
+}
+
+
+.w_90{
+	width: 90%;
+}	
+.w_50{
+	width: 50%;
+}
+.w_10{
+	width: 10%;
+}
+
+
+.container{
+    width: 700px;
+    padding-top:10rem ;
+    padding-left: 2rem;
+	color: #fff;
+	display: flex;
+}
+.container .n{
+	color: red;
+	font-size: 2rem;
+}
+.spacing{
+    padding: 20px 0 20px 0; 
+}
+.container h3{
+	font-size: 1.2rem;
+	letter-spacing: 5px;
+}
+.container h2{
+	font-size: 3.2rem;
+}
+.container .play{
+	margin: 0 10px 0 0;
+}
+.container p{
+	font-size: 1.2rem;
+}
+.button_grey{
+
+    background: rgba(209, 208, 192, .2);
+    font-size: 1.1rem;
+	border-radius: 2px;
+    margin: 10px 10px 0px 0px;
+}
+
+.button_grey:hover{
+    background: rgba(209, 208, 192, .5);
+    color: #000;
+}
+
+/* in phone */
+
+@media screen and (max-width: 768px){
+    .bannerprincipal{
+    
+        height: 50vh;
+        /* background-image: `url(${item?.backdrop})`; */
+        background-size: fill;
+    }
+    .container{
+        width: 70%;
+        font-size: 1rem;
+        
+        padding: 50px 0px 0px 10px;
+    }
+    .container h2{
+        font-size: 20px;
+    }
+    .container h3{
+        font-size: 20px;
+    }
+    .container p{
+        font-size: 15px;
+    }
+    .container .play{
+        margin: 0 10px 0 0;
+    }
+    .container .n{
+        font-size: 1.5rem;
+    }
+    .w_90{
+        width: 100%;
+    }
+    .w_50{
+        width: 100%;
+    }
+    .w_10{
+        width: 100%;
+    }
+}

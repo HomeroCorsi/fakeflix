@@ -9,6 +9,7 @@ export const moviesAdapter = (movies) => {
         backdrop: TMDB.images.backdrop_high_quality + movie.backdrop_path,
         rating: movie.vote_average,
         trailer: movie.key,
+        overview: movie.overview,
       };
     });
   };
