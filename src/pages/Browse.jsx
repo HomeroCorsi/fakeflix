@@ -37,6 +37,7 @@ const Browse = () => {
   /* Hace un useEffect que cambie de valor del array aleatoriamente */
 
 
+
   return (
     <>
       <NavBar/>

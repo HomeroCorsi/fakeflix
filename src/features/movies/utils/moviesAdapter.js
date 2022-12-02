@@ -10,6 +10,7 @@ export const moviesAdapter = (movies) => {
         rating: movie.vote_average,
         trailer: movie.key,
         overview: movie.overview,
+
       };
     });
   };
