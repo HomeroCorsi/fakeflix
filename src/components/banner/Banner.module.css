@@ -9,6 +9,7 @@
 
 .w_90{
 	width: 90%;
+    margin-top: 35px;
 }	
 .w_50{
 	width: 50%;
@@ -26,15 +27,16 @@
 	display: flex;
 }
 .container .n{
-	color: red;
-	font-size: 2rem;
+    color: red;
+	font-size: 3rem;
 }
 .spacing{
     padding: 20px 0 20px 0; 
 }
 .container h3{
-	font-size: 1.2rem;
+    font-size: 2.1rem;
 	letter-spacing: 5px;
+    margin-bottom: 20px;
 }
 .container h2{
 	font-size: 3.2rem;
@@ -43,7 +45,7 @@
 	margin: 0 10px 0 0;
 }
 .container p{
-	font-size: 1.2rem;
+	font-size: 2.5rem;
 }
 .button_grey{
 
@@ -90,6 +92,8 @@
     }
     .w_90{
         width: 100%;
+    margin-top: 20px;
+
     }
     .w_50{
         width: 100%;
