@@ -8,6 +8,7 @@ export const seriesAdapter = (series) => {
         poster: TMDB.images.poster_high_quality + serie.poster_path,
         backdrop: TMDB.images.backdrop_high_quality + serie.backdrop_path,
         rating: serie.vote_average,
+        genres: serie.genre_ids
       };
     });
   };

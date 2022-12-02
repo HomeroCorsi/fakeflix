@@ -1,13 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import netflixPlayButton from './netflixPlayButton.jpg'
-
+import PlusButton from "./Buttons/PlusButton";
+import PlayButton from "./Buttons/PlayButton";
+// import useTrailer from "../../customHooks/useTrailer";
+import Categories from "./categories/Categories";
 
 const Card = ({ item }) => {
+
+
    const navigate = useNavigate();
 
-   const handleClick = () => {
+   const navigateTrailer = () => {
      navigate("/view", {
       state: item,
     }); 
@@ -19,11 +23,9 @@ const [hover, setHover] = useState(false);
 
 
 
-
   return (
     <>
     <div
-      onClick={handleClick}
       style={{
         ...cardStyle,
         transition: hover ? "all 0.3s ease-in-out" : null,
@@ -34,17 +36,23 @@ const [hover, setHover] = useState(false);
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div style={titleContainerStyle}>
+      <div style={titleContainerStyle}       onClick={navigateTrailer}>
         <h1 style={titleStyle}>{item.name}</h1>
       </div> 
   
    
       <div style={{...bottomDiv,
       transform: hover ? 'scale(1.1)' : null,
-      // transition: hover ? "all 0.3s ease-in-out" : null,
       visibility: hover ? 'visible' : 'hidden',
+      zIndex: '999 !important'
       }}>
-        <img style={netflixPlayButtonStyle} src={netflixPlayButton}></img>
+        <div style={{display:'flex',
+      justifyContent:'space-between'}}>
+        <PlayButton navigateTrailer={navigateTrailer}/>
+        <PlusButton/>
+
+        </div>
+          <Categories item={item}/>
       </div>
 
 
@@ -64,7 +72,6 @@ height: "150px",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-//   transform: ishover ? scale(1.1) : scale(0.0)
   
 
 };
@@ -85,18 +92,11 @@ const titleStyle = {
 
 const bottomDiv = {
   
-  height: '35%',
+  height: '45%',
   width: '95%',
   background: 'black',
   marginTop: '5rem',
   marginLeft: '0.75rem',
-  zIndex: '999 !important',
+  zIndex: '700',
 }
 
-const netflixPlayButtonStyle = {
-  marginTop: '0.8rem',
-  marginLeft: '2.5rem',
-  height: '2rem',
-  width: '2rem',
-  borderRadius: '1rem',
-}
