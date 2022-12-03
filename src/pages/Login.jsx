@@ -2,7 +2,6 @@ import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import React, { useContext, useState } from "react";
 import { TYPES } from "../reducer/authReducer";
-
 import styles from "./Login.module.css";
 
 const Login = () => {
@@ -18,6 +17,7 @@ const Login = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
     setUser({
       ...user,
       [name]: value,
