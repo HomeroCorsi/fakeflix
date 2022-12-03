@@ -4,9 +4,9 @@ import { useState } from "react";
 import PlusButton from "./Buttons/PlusButton";
 import PlayButton from "./Buttons/PlayButton";
 // import useTrailer from "../../customHooks/useTrailer";
-import Categories from "./categories/Categories";
+import CategoriesMovies from "./categories/CategoriesMovies";
 
-const Card = ({ item }) => {
+const CardMovies = ({ item }) => {
 
 
    const navigate = useNavigate();
@@ -54,7 +54,7 @@ const [hover, setHover] = useState(false);
         <PlusButton/>
 
         </div>
-          <Categories item={item}/>
+          <CategoriesMovies item={item}/>
       </div>
 
 
@@ -66,7 +66,7 @@ const [hover, setHover] = useState(false);
   );
 };
 
-export default Card;
+export default CardMovies;
 
 const cardStyle = {
 height: "150px",

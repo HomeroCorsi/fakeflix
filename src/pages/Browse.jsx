@@ -5,7 +5,7 @@ import Banner from "../components/banner/Banner";
 // import { getPopularMovies } from "../services/getPopularMovies";
 import useFetch from "../customHooks/useFetch";
 import getPopularMovies from "../features/movies/utils/getPopularMovies";
-import Slider from "../components/slider/Slider";
+import SliderMovies from "../components/slider/SliderMovies";
 import getTopRatedMovies from "../features/movies/utils/getTopRatedMovies";
 import getPopularseries from "../features/series/utils/getPopularSeries";
 import getTopRatedSeries from "../features/series/utils/getTopRatedSeries";
@@ -13,6 +13,7 @@ import getTopRatedSeries from "../features/series/utils/getTopRatedSeries";
 // import { useContext } from "react";
 import NavBar from "../components/navBar/NavBar";
 import './Browse.module.css'
+import SliderTv from "../components/slider/SliderTv";
 
 const Browse = () => {
   const { data : popularMovies} = useFetch(getPopularMovies);
@@ -44,13 +45,13 @@ const Browse = () => {
       <Banner item={popularMovies[0]} />
       <div className="body">
       <div style={titleStyle}>Películas más vistas</div>
-      <Slider items={popularMovies} />
+      <SliderMovies items={popularMovies} />
       <div style={titleStyle}>Películas mejor valoradas</div>
-      <Slider items={topRatedMovies} />
+      <SliderMovies items={topRatedMovies} />
       <div style={titleStyle}>Series más vistas</div>
-      <Slider items={popularSeries} />
+      <SliderTv items={popularSeries} />
       <div style={titleStyle}>Series mejor valoradas</div>
-      <Slider items={TopRatedSeries} />
+      <SliderTv items={TopRatedSeries} />
       </div>
     </>
   );
