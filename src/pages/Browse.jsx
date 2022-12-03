@@ -42,6 +42,7 @@ const Browse = () => {
     <>
       <NavBar/>
       <Banner item={popularMovies[0]} />
+      <div className="body">
       <div style={titleStyle}>Películas más vistas</div>
       <Slider items={popularMovies} />
       <div style={titleStyle}>Películas mejor valoradas</div>
@@ -50,6 +51,7 @@ const Browse = () => {
       <Slider items={popularSeries} />
       <div style={titleStyle}>Series mejor valoradas</div>
       <Slider items={TopRatedSeries} />
+      </div>
     </>
   );
 };

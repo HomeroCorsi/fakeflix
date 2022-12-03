@@ -44,7 +44,9 @@ const [hover, setHover] = useState(false);
       <div style={{...bottomDiv,
       transform: hover ? 'scale(1.1)' : null,
       visibility: hover ? 'visible' : 'hidden',
-      zIndex: '999 !important'
+      // zIndex: '999 !important',
+    
+
       }}>
         <div style={{display:'flex',
       justifyContent:'space-between'}}>
@@ -72,6 +74,8 @@ height: "150px",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
+
+
   
 
 };
