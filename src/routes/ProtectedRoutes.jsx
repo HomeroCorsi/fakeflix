@@ -1,13 +1,11 @@
 import React from "react";
-import { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
-
+import { useAuth } from "../context/AuthProvider";
 
 const ProtectedRoutes = ({ children, url }) => {
-  const { isAuth } = useContext(AuthContext);
+  const { auth } = useAuth();
 
-  if (isAuth) {
+  if (auth.isAuth) {
     return children;
   }
 

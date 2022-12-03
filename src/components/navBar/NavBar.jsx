@@ -1,15 +1,15 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import "./NavBar.modules.css";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthProvider";
 
-import { AuthContext } from "../../context/AuthContext";
-import { TYPES } from "../../reducer/authReducer";
-
+// import { AuthContext } from "../../context/AuthContext";
+// import { TYPES } from "../../reducer/authReducer";
 
 const NavBar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [scroll, setScroll] = useState(false);
-  const { dispatch } = useContext(AuthContext);
+  // const { dispatch } = useContext(AuthContext);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -19,15 +19,19 @@ const NavBar = () => {
     });
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    localStorage.clear()
+  const { logout } = useAuth();
+  const handleSubmit = () => {
+    logout("Nico");
+
+    /* e.preventDefault();
+    
+    localStorage.removeItem('auth');
 
     dispatch({ type: TYPES.LOGOUT});
 
     navigate("/Login", {
       replace: false,
-    });
+    }); */
   };
 
   return (
@@ -40,7 +44,9 @@ const NavBar = () => {
         />
       </div>
       <div className="NavDerecho">
-        <button className="salir" onClick={handleSubmit}>Salir</button>
+        <button className="salir" onClick={handleSubmit}>
+          Salir
+        </button>
         <img
           className="user"
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"

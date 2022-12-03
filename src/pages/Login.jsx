@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import React, { useContext, useState } from "react";
 import { TYPES } from "../reducer/authReducer";
 import styles from "./Login.module.css";
-
+import { useAuth } from "../context/AuthProvider";
 const Login = () => {
-  const navigate = useNavigate();
+ /*  // const navigate = useNavigate();
   const { dispatch } = useContext(AuthContext);
 
   // const {setUser : setUsername, setIsAuth} = useContext(AuthContext);
@@ -15,32 +15,40 @@ const Login = () => {
     password: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    
-    setUser({
-      ...user,
-      [name]: value,
-    });
-  };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     const { email } = user;
+    
     const data = {
-      user: {
-        username: "nico",
-        email: email,
-      },
+      name: "nico",
+      email: email,
       token: "1233324125145",
     };
 
     dispatch({ type: TYPES.LOGIN, payload: data });
+    
+    localStorage.setItem("auth", JSON.stringify(data));
+    
+    //navigate("/Browse", {
+      //  replace: true,
+      //});
+    };
+    */
+   const handleChange = (e) => {
+     /* const { name, value } = e.target;
+   
+     setUser({
+       ...user,
+       [name]: value,
+     }); */
+   };
+   
+  const { login } = useAuth();
 
-    navigate("/Browse", {
-      replace: true,
-    });
+  const handleLogin = () => {
+    login("Nico");
   };
 
   return (
@@ -56,14 +64,13 @@ const Login = () => {
 
         <div className={styles.login}>
           <h1 className={styles.login_title}>Iniciar Sesión</h1>
-          <form onSubmit={handleSubmit} className={styles.login_group}>
+          <form onSubmit={handleLogin} className={styles.login_group}>
             <input
               type="text"
               name="email"
               placeholder="Email"
               className={styles.login_input}
               onChange={handleChange}
-              value={user.email}
             />
             <input
               type="password"
@@ -71,7 +78,6 @@ const Login = () => {
               placeholder="Password"
               className={styles.login_input}
               onChange={handleChange}
-              value={user.password}
             />
             <button type="submit" className={styles.login_sing_in}>
               Iniciar sesión
@@ -79,7 +85,8 @@ const Login = () => {
           </form>
           <div className={styles.login_secondary}>
             <p className={styles.footer_question}>
-              <input type="checkbox" className={styles.checkbox}></input>Recordarme
+              <input type="checkbox" className={styles.checkbox}></input>
+              Recordarme
             </p>
             <a href="#" className={styles.footer_question}>
               ¿Necitas ayuda?

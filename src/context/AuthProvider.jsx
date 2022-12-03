@@ -1,19 +1,45 @@
+import { useContext, useReducer } from "react";
+import {
+  initialAuthReducer,
+  authReducer,
+  TYPES,
+  initialState,
+} from "../reducer/authReducer";
 import { AuthContext } from "./AuthContext";
-import { initialState, authReducer } from "../reducer/authReducer";
-import { useReducer } from "react";
 
 const AuthProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(authReducer, initialState);
+  const [auth, dispatch] = useReducer(
+    authReducer,
+    initialState,
+    initialAuthReducer
+  );
 
-  // console.log(state)
+  const login = (name) => {
+    dispatch({
+      type: TYPES.LOGIN,
+      payload: { name },
+    });
+    const auth = {
+      name,
+      isAuth: true,
+    };
+    localStorage.setItem("auth", JSON.stringify(auth));
+  };
+
+  const logout = () => {
+    dispatch({
+      type: TYPES.LOGOUT,
+    });
+
+    localStorage.removeItem("auth");
+  };
 
   return (
     <AuthContext.Provider
       value={{
-        user: state.user,
-        token: state.token,
-        isAuth: state.isAuth,
-        dispatch,
+        login,
+        logout,
+        auth,
       }}
     >
       {children}
@@ -22,3 +48,12 @@ const AuthProvider = ({ children }) => {
 };
 
 export default AuthProvider;
+
+export const useAuth = () => {
+  const { login, logout, auth } = useContext(AuthContext);
+  return {
+    login,
+    logout,
+    auth,
+  };
+};
