@@ -1,7 +1,5 @@
-import { AuthContext } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
-import React, { useContext, useState } from "react";
-import { TYPES } from "../reducer/authReducer";
+
+import React from "react";
 import styles from "./Login.module.css";
 import { useAuth } from "../context/AuthProvider";
 const Login = () => {
@@ -37,12 +35,7 @@ const Login = () => {
     };
     */
    const handleChange = (e) => {
-     /* const { name, value } = e.target;
-   
-     setUser({
-       ...user,
-       [name]: value,
-     }); */
+    
    };
    
   const { login } = useAuth();

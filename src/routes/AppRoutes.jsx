@@ -11,9 +11,10 @@ export const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route
+          exact
           path="*"
           element={
-            <ProtectedRoutes url={"/login"}>
+            <ProtectedRoutes url={"/"}>
               <Routes>
                 <Route exact path="/Browse" element={<Browse />} />
                 <Route path="view/:id" element={<View />} />
@@ -24,7 +25,7 @@ export const AppRoutes = () => {
 
         <Route
           exact
-          path="/login"
+          path="/"
           element={
             <PublicRoute url={"/Browse"}>
               <Login />
@@ -37,11 +38,3 @@ export const AppRoutes = () => {
 };
 
 export default AppRoutes;
-
-// eslint-disable-next-line no-lone-blocks
-{
-  /* <Routes>
-            <Route path='/login' element={<Login/>} />
-            <Route path='/Browse' element={<Browse/>}/>
-        </Routes> */
-}
