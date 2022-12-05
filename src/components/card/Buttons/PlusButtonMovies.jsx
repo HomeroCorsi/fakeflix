@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useContext, useState } from 'react'
-import { TvIdContext } from '../../../context/TvIdContext'
+import { MoviesIdContext } from '../../../context/MoviesIdContext'
 
-const PlusButtonTv = ({item}) => {
+const PlusButtonMovies = ({item}) => {
 
-	const {TvId, setTvId} = useContext(TvIdContext)
+	const {MoviesId, setMoviesId} = useContext(MoviesIdContext)
 	// const [newId, setNewId] = useState([])
 
 	const itemid = item.id
@@ -13,7 +13,7 @@ const PlusButtonTv = ({item}) => {
   return (
         <StyledPlusButton onClick={() => 
 			
-			setTvId(prevState => {
+			setMoviesId(prevState => {
 				// check if it is already added
 				if(prevState.includes(itemid)) { 
 				  // clone the prevState arr to prevent side effects  
@@ -30,7 +30,7 @@ const PlusButtonTv = ({item}) => {
     )
 }
 
-export default PlusButtonTv;
+export default PlusButtonMovies;
 
 const StyledPlusButton = styled.button`
 	border: 2px solid lightgrey;
