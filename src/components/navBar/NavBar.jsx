@@ -32,6 +32,15 @@ const NavBar = () => {
   const myListNavigate = () => {
   navigate('/myList')}
 
+  const browseNavigate = () => {
+    navigate('/browse')}
+
+  const seriesNavigate = () => {
+    navigate('/series')}
+
+  const moviesNavigate = () => {
+    navigate('/movies')}
+
   return (
     <div className={`nav ${scroll && "nav_black"}`}>
       <div className="NavIzquierdo">
@@ -39,10 +48,11 @@ const NavBar = () => {
           className="nav_logo"
           src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
           alt="Netflix Logo"
+          onClick={browseNavigate}
         />
         <button className="navBarButton" onClick={myListNavigate}>Mi Lista</button>
-        {/* <button className="navBarButton" onClick={}>navBarButton</button>
-        <button className="navBarButton" onClick={}>navBarButton</button> */}
+        <button className="navBarButton" onClick={seriesNavigate}>Tv</button>
+        <button className="navBarButton" onClick={moviesNavigate}>Películas</button>
       </div>
       <div className="NavDerecho">
         <button className="navBarButton" onClick={handleSubmit}>Salir</button>

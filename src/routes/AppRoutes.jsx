@@ -6,6 +6,8 @@ import ProtectedRoutes from "./ProtectedRoutes";
 import Browse from "../pages/Browse";
 import View from "../pages/View";
 import MyList from "../pages/MyList";
+import Series from "../pages/Series";
+import Movies from "../pages/Movies";
 
 export const AppRoutes = () => {
   return (
@@ -16,9 +18,12 @@ export const AppRoutes = () => {
           element={
             <ProtectedRoutes url={"/login"}>
               <Routes>
-                <Route exact path="/Browse" element={<Browse />} />
+                <Route exact path="/browse" element={<Browse />} />
                 <Route path="view/:id" element={<View />} />
                 <Route exact path="/myList" element={<MyList/>}/>
+                <Route path='/series' element={<Series/>}/>
+                <Route path='/movies' element={<Movies/>}/>
+
               </Routes>
             </ProtectedRoutes>
           }

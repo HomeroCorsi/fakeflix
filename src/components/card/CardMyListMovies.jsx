@@ -16,6 +16,7 @@ const getMovieDetails = async (id) => {
 
 getMovieDetails(item)
 
+console.log(data)
 
 
 
@@ -23,7 +24,7 @@ getMovieDetails(item)
         <div
           style={{
             ...cardStyle,
-            // backgroundImage: `url(https://image.tmdb.org/t/p/w500${item.backdrop})`,
+            backgroundImage: `url(https://image.tmdb.org/t/p/w500${data.backdrop_path})`,
           }}
         >
           <div style={titleContainerStyle}>
