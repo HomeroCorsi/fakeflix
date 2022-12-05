@@ -9,18 +9,14 @@ export const MyList = () => {
 const {moviesId} = useContext(MoviesIdContext)
 const {TvId} = useContext(TvIdContext)
 
-
-// (436270)
-console.log(moviesId)
-
-
   return (
     <>
         <NavBar/>
+        <div style={divListas}>
         <div style={titleStyle}>Mis películas</div>
         <SliderMyListMovies items={moviesId}/>
         <div style={titleStyle}>Mis programas de televisión</div>
-
+        </div>
     </>
   )
 }
@@ -28,8 +24,13 @@ console.log(moviesId)
 export default MyList;
 
 
-const titleStyle = {
+const divListas = {
   paddingTop: '15rem',
+
+}
+
+const titleStyle = {
+  marginTop: '15rem',
   color: "white",
   fontSize: "50px",
   padding: '2rem'

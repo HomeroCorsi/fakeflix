@@ -1,10 +1,9 @@
-import { moviesAdapter } from "./moviesAdapter";
 import { TMDB } from "../../../config/tmdb";
 
 
-const getMovieDetails = async ({id}) => {
+const getMovieDetails = async (id) => {
     const res = await TMDB.api.get(TMDB.path.movies.details(id));
-    const moviesAdapted = res.data.results;
+    const moviesAdapted = res.data;
   
     return moviesAdapted;
   };

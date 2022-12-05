@@ -1,8 +1,22 @@
 import React from 'react'
+import { useState } from 'react';
+import { TMDB } from '../../config/tmdb';
 
 const CardMyListMovies = ({item}) => {
 
-  
+const [data, setData] = useState([])
+
+const getMovieDetails = async (id) => {
+  const res = await TMDB.api.get(TMDB.path.movies.details(id));
+  const moviesDetails = res.data;
+  setData(moviesDetails)
+
+  return moviesDetails;
+};
+
+getMovieDetails(item)
+
+
 
 
     return (
@@ -13,7 +27,7 @@ const CardMyListMovies = ({item}) => {
           }}
         >
           <div style={titleContainerStyle}>
-            <h1 style={titleStyle}>{item}</h1>
+            <h1 style={titleStyle}>{data.title}</h1>
           </div>
         </div>
       );  
