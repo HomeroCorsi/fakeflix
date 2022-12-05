@@ -35,7 +35,7 @@
     width: 40px;
     object-fit: contain;
   }
-  .salir{
+  .navBarButton{
     color: #fff;
     cursor: pointer;
     margin-right: 20px;
@@ -44,4 +44,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.NavIzquierdo{
+  margin-left: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

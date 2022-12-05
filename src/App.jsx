@@ -1,12 +1,18 @@
 import React from 'react'
 import AuthProvider from './context/AuthProvider'
 import { AppRoutes } from './routes/AppRoutes'
+import MoviesIdProvider from './context/MoviesIdProvider'
+import TvIdProvider from './context/TvIdProvider'
 
 const App = () => {
   return (
-    <AuthProvider>
-      <AppRoutes/>
-    </AuthProvider>
+    <TvIdProvider>
+    <MoviesIdProvider>
+      <AuthProvider>
+        <AppRoutes/>
+      </AuthProvider>
+    </MoviesIdProvider>
+    </TvIdProvider>
   )
 }
 

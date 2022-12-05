@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import PlusButton from "./Buttons/PlusButton";
+import PlusButtonTv from "./Buttons/PlusButtonMovies";
 import PlayButton from "./Buttons/PlayButton";
 // import useTrailer from "../../customHooks/useTrailer";
 import CategoriesTv from "./categories/CategoriesTv";
@@ -51,7 +51,7 @@ const [hover, setHover] = useState(false);
         <div style={{display:'flex',
       justifyContent:'space-between'}}>
         <PlayButton navigateTrailer={navigateTrailer}/>
-        <PlusButton/>
+        <PlusButtonTv item={item}/>
 
         </div>
           <CategoriesTv item={item}/>

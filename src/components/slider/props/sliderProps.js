@@ -30,10 +30,10 @@ export const sliderProps = {
         slidesPerGroup: 1,
       }
   },
-  // scrollbar: true,
+  scrollbar: false,
   navigation: true,
-//   pagination: {
-//     clickable: true,
-//   },
+  // pagination: {
+  //   clickable: true,
+  // },
   modules: [Navigation, Pagination],
-};
+}

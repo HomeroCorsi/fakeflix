@@ -5,6 +5,7 @@ import PublicRoute from "./PublicRoute";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Browse from "../pages/Browse";
 import View from "../pages/View";
+import MyList from "../pages/MyList";
 
 export const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ export const AppRoutes = () => {
               <Routes>
                 <Route exact path="/Browse" element={<Browse />} />
                 <Route path="view/:id" element={<View />} />
+                <Route exact path="/myList" element={<MyList/>}/>
               </Routes>
             </ProtectedRoutes>
           }
