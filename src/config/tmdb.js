@@ -14,6 +14,7 @@ export const TMDB = {
       popular: "/movie/popular",
       top_rated: "/movie/top_rated",
       getTrailer: (id) => `/movie/${id}/videos`,
+      details: (id) => `/movie/${id}`,
     },
     series: {
       popular: "/tv/popular",

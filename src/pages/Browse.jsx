@@ -24,6 +24,8 @@ const Browse = () => {
 
   const { data : TopRatedSeries} = useFetch(getTopRatedSeries);
 
+  
+
 //   const { isAuth, login, logout } = useAuth();
 //   console.log(isAuth, login, logout);
 
