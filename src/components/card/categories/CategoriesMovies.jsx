@@ -13,13 +13,6 @@ const CategoriesMovies = ({item}) => {
   
   const navigate = useNavigate();
   
-  const navigateGenre = () => {
-    navigate("/categoriesMovies", {
-     state: item,
-   }); 
-
-   navigate(`/categoriesMovies/${item.id}`);
- };
 
 
 
@@ -44,7 +37,7 @@ const infoMovieDataName = movieData[0]
     justifyContent:'space-around'}}>
 
            { 
-           infoMovieDataName.genreMovie?.map(info => <span style={categoriesInd} onClick={navigateGenre}>{info.name}</span>)||
+           infoMovieDataName.genreMovie?.map(info => <span style={categoriesInd} onClick={() =>  navigate(`/categoriesMovies/${info.id}`)}>{info.name}</span>)||
             "la id no coincide con ningún género"
             }
 
