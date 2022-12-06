@@ -14,11 +14,11 @@ const CategoriesTv = ({item}) => {
   const navigate = useNavigate();
   
   const navigateGenre = () => {
-    navigate("/categories", {
+    navigate("/categoriesSeries", {
      state: item,
    }); 
 
-   navigate(`/categories/${item.id}`);
+   navigate(`/categoriesSeries/${item.id}`);
  };
 
 
@@ -44,7 +44,7 @@ const infoTvData = tvData[0]
     justifyContent:'space-around'}}>
 
            { 
-            infoTvData.genreTv?.map(info => <span style={categoriesInd}>{info.name}</span>)||
+            infoTvData.genreTv?.map(info => <span style={categoriesInd} onClick={navigateGenre}>{info.name}</span>)||
             "la id no coincide con ningún género"
             }
 
