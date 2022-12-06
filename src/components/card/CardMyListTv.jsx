@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const CardMyListMovies = ({item}) => {
+const CardMyListTv = ({item}) => {
 
 const [data, setData] = useState([])
 const [hover, setHover] = useState(false);
@@ -24,18 +24,18 @@ const navigateTrailer = () => {
 };
 
 const getMovieDetails = async (id) => {
-  const res = await TMDB.api.get(TMDB.path.movies.details(id));
-  const moviesDetails = res.data;
-  setData(moviesDetails)
-  const generosMovies = res.data.genres.slice(0,3).map(info => info);
-  setMovieData([{genreMovie : generosMovies}])
+  const res = await TMDB.api.get(TMDB.path.Tv.details(id));
+  const TvDetails = res.data;
+  setData(TvDetails)
+  const generosTv = res.data.genres.slice(0,3).map(info => info);
+  setMovieData([{genreMovie : generosTv}])
 
-  return moviesDetails;
+  return TvDetails;
 };
 
 useEffect(() => {getMovieDetails(item)}, [])
 
-
+// console.log(data.genres.name)
 const infoMovieDataName = movieData[0]
 
 
@@ -76,7 +76,8 @@ return (
     justifyContent:'space-around'}}>
 
         {
-          infoMovieDataName.genreMovie?.map(info => <span style={categoriesInd} onClick={() =>  navigate(`/categoriesMovies/${info.id}`)}>{info.name}</span>)||
+          infoMovieDataName.genreMovie?.map(info => <span style={categoriesInd} onClick={
+            () =>  navigate(`/categoriesSeries/${info.id}`)}>{info.name}</span>)||
           "cargando"
         }
 
@@ -93,7 +94,7 @@ return (
 );
 };
 
-export default CardMyListMovies;
+export default CardMyListTv;
 
 const cardStyle = {
   height: "150px",
