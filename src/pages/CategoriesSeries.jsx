@@ -24,10 +24,10 @@ const CategoriesSeries = () => {
         getCategorie();
       }, [{id}]);
 
-console.log(data)
 
   return (<>
     <NavBar/>
+    <div style={titleStyle}>Contenido Parecido</div>
     <div style={moviesConatiner}>
     {data.map((info) => <div style={cards}><CardTv item={info}/></div>)}
     </div>
@@ -45,5 +45,11 @@ const moviesConatiner = {
 }
 
 const cards = {
-    paddingTop:'8rem'
+    padding:'4rem'
 }
+
+const titleStyle = {
+    color: "white",
+    fontSize: "50px",
+    paddingTop: '5rem'
+    };

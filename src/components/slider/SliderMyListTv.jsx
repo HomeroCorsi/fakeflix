@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import CardMyListMovies from "../card/CardMyListMovies";
+import CardMyListTv from "../card/CardMyListTv";
 import { sliderProps } from "./props/sliderProps";
 
 const SliderMyListTv = ({ items }) => {

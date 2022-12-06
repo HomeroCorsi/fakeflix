@@ -98,6 +98,6 @@ const bottomDiv = {
   background: 'black',
   marginTop: '5rem',
   marginLeft: '0.75rem',
-  zIndex: '700',
+  // zIndex: '700',
 }
 
