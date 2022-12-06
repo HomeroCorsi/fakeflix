@@ -25,12 +25,12 @@ export default MyList;
 
 
 const divListas = {
-  paddingTop: '15rem',
+  paddingTop: '3rem',
 
 }
 
 const titleStyle = {
-  marginTop: '15rem',
+  marginTop: '10rem',
   color: "white",
   fontSize: "50px",
   padding: '2rem'
