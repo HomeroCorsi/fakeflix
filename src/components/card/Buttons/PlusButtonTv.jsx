@@ -6,12 +6,13 @@ import { TvIdContext } from '../../../context/TvIdContext'
 const PlusButtonTv = ({item}) => {
 
 	const {TvId, setTvId} = useContext(TvIdContext)
-	// const [newId, setNewId] = useState([])
+
 
 	const itemid = item.id
 
+
   return (
-        <StyledPlusButton onClick={() => 
+        <StyledPlusButtonTv onClick={() => 
 			
 			setTvId(prevState => {
 				// check if it is already added
@@ -24,6 +25,7 @@ const PlusButtonTv = ({item}) => {
 				} else {
 				   return [...prevState, itemid]
 				}})
+
 		
 		
 		}/>
@@ -32,7 +34,7 @@ const PlusButtonTv = ({item}) => {
 
 export default PlusButtonTv;
 
-const StyledPlusButton = styled.button`
+const StyledPlusButtonTv = styled.button`
 	border: 2px solid lightgrey;
 	background-color: #fff;
 	font-size: 16px;

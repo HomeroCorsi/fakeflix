@@ -24,7 +24,7 @@ const navigateTrailer = () => {
 };
 
 const getMovieDetails = async (id) => {
-  const res = await TMDB.api.get(TMDB.path.Tv.details(id));
+  const res = await TMDB.api.get(TMDB.path.series.details(id));
   const TvDetails = res.data;
   setData(TvDetails)
   const generosTv = res.data.genres.slice(0,3).map(info => info);

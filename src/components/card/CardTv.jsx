@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import PlusButtonTv from "./Buttons/PlusButtonMovies";
+import PlusButtonTv from "./Buttons/PlusButtonTv";
 import PlayButton from "./Buttons/PlayButton";
 // import useTrailer from "../../customHooks/useTrailer";
 import CategoriesTv from "./categories/CategoriesTv";

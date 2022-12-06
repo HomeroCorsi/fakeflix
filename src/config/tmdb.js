@@ -19,6 +19,7 @@ export const TMDB = {
     series: {
       popular: "/tv/popular",
       top_rated: "/tv/top_rated",
+      details: (id) => `/tv/${id}`,
     },
   },
   images: {
