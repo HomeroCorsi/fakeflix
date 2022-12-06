@@ -47,7 +47,7 @@ const View =  () => {
         width:'100%',
         height:'75%',
         fontSize:'5rem',
-       }} >Lo sentimos, no pudimos encontrar el video</div>
+       }} >Lo sentimos, no pudimos encontrar el video (Las series no poseen trailer)</div>
        
     <ReactPlayer url={`https://www.youtube.com/watch?v=${data}`}
      playing={true}

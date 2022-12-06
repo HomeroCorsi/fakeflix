@@ -75,9 +75,6 @@ height: "150px",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
 
-
-  
-
 };
 
 const titleContainerStyle = {

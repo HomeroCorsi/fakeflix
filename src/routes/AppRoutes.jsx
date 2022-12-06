@@ -8,6 +8,8 @@ import View from "../pages/View";
 import MyList from "../pages/MyList";
 import Series from "../pages/Series";
 import Movies from "../pages/Movies";
+import CategoriesMovies from "../pages/CategoriesMovies";
+import CategoriesSeries from "../pages/CategoriesSeries";
 
 export const AppRoutes = () => {
   return (
@@ -23,6 +25,9 @@ export const AppRoutes = () => {
                 <Route exact path="/myList" element={<MyList/>}/>
                 <Route path='/series' element={<Series/>}/>
                 <Route path='/movies' element={<Movies/>}/>
+                <Route path="categoriesMovies/:id" element={<CategoriesMovies />} />
+                <Route path="categoriesSeries/:id" element={<CategoriesSeries />} />
+
 
               </Routes>
             </ProtectedRoutes>
