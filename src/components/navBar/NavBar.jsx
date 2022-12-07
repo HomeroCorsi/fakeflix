@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { TYPES } from "../../reducer/authReducer";
 
-
 const NavBar = () => {
   const navigate = useNavigate();
   const [scroll, setScroll] = useState(false);
@@ -41,6 +40,9 @@ const NavBar = () => {
   const moviesNavigate = () => {
     navigate('/movies')}
 
+  const {user} = useContext(AuthContext)
+
+
   return (
     <div className={`nav ${scroll && "nav_black"}`}>
       <div className="NavIzquierdo">
@@ -55,6 +57,7 @@ const NavBar = () => {
         <button className="navBarButton" onClick={moviesNavigate}>Películas</button>
       </div>
       <div className="NavDerecho">
+        <button className="navBarButton" >Bienvenidx {user.email} </button>
         <button className="navBarButton" onClick={handleSubmit}>Salir</button>
         <img
           className="user"

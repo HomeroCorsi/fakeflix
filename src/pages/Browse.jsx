@@ -1,16 +1,11 @@
-// import { useAuth } from "../../../auth/context/AuthProvider";
+
 import Banner from "../components/banner/Banner";
-// import Slider from "../../../common/components/slider/Slider";
-// import useFetch from "../../../common/hooks/useFetch";
-// import { getPopularMovies } from "../services/getPopularMovies";
 import useFetch from "../customHooks/useFetch";
 import getPopularMovies from "../features/movies/utils/getPopularMovies";
 import SliderMovies from "../components/slider/SliderMovies";
 import getTopRatedMovies from "../features/movies/utils/getTopRatedMovies";
 import getPopularseries from "../features/series/utils/getPopularSeries";
 import getTopRatedSeries from "../features/series/utils/getTopRatedSeries";
-// import { AuthContext } from "../context/AuthContext";
-// import { useContext } from "react";
 import NavBar from "../components/navBar/NavBar";
 import './Browse.module.css'
 import SliderTv from "../components/slider/SliderTv";
@@ -24,10 +19,11 @@ const Browse = () => {
 
   const { data : TopRatedSeries} = useFetch(getTopRatedSeries);
 
+
+
+  
   
 
-//   const { isAuth, login, logout } = useAuth();
-//   console.log(isAuth, login, logout);
 
   
  /*  const [movie, setMovie] = useState<Movie | null>(null)
