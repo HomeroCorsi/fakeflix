@@ -10,8 +10,6 @@ export const MyList = () => {
 const {moviesId} = useContext(MoviesIdContext)
 const {TvId} = useContext(TvIdContext)
 
-console.log(TvId)
-
   return (
     <>
         <NavBar/>

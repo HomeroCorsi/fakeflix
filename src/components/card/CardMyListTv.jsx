@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { TMDB } from '../../config/tmdb';
 import PlayButton from './Buttons/PlayButton';
+import RemoveButtonTv from './Buttons/RemoveButtonTv';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -65,11 +66,11 @@ return (
   
 
     }}>
+
       <div style={{display:'flex',
     justifyContent:'space-between'}}>
       <PlayButton navigateTrailer={navigateTrailer}/>
-
-
+      <RemoveButtonTv style={removeButton} item={item}>Quitar</RemoveButtonTv>
       </div>
 
       <div style={{display:'flex',
@@ -136,4 +137,10 @@ const cardStyle = {
     fontSize: '80%',
     marginTop: '5%',
     cursor: 'pointer'
+}
+
+const removeButton = {
+  color : 'black',
+  fontSize: '1.2rem',
+
 }

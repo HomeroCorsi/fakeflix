@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { TMDB } from '../../config/tmdb';
 import PlayButton from './Buttons/PlayButton';
 import { useNavigate } from 'react-router-dom';
-
+import RemoveButtonMovies from './Buttons/RemoveButtonMovies';
 
 
 const CardMyListMovies = ({item}) => {
@@ -68,6 +68,7 @@ return (
       <div style={{display:'flex',
     justifyContent:'space-between'}}>
       <PlayButton navigateTrailer={navigateTrailer}/>
+      <RemoveButtonMovies item={item}/>
 
 
       </div>
