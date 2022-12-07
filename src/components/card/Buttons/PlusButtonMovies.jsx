@@ -26,7 +26,10 @@ const PlusButtonMovies = ({item}) => {
 				}})
 		
 		
-		}/>
+		}
+		title={"Añadir a mi lista"}
+
+		/>
     )
 }
 

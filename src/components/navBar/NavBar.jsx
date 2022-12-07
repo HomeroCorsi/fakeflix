@@ -57,7 +57,7 @@ const NavBar = () => {
         <button className="navBarButton" onClick={moviesNavigate}>Películas</button>
       </div>
       <div className="NavDerecho">
-        <button className="navBarButton" >Bienvenidx {user.email} </button>
+        <button className="navBarButton" >Bienvenidx {user.email} :) </button>
         <button className="navBarButton" onClick={handleSubmit}>Salir</button>
         <img
           className="user"

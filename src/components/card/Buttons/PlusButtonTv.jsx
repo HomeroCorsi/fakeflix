@@ -28,7 +28,9 @@ const PlusButtonTv = ({item}) => {
 
 		
 		
-		}/>
+		}
+		title={"Añadir a mi lista"}
+		/>
     )
 }
 
