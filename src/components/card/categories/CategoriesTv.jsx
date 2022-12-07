@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CategoriesTv = ({item}) => {
 
-  const urlTvGenres = `https://api.themoviedb.org/3/tv/${item.id}?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US`;
+  const urlTvGenres = `https://api.themoviedb.org/3/tv/${item.id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
 
   const [tvData, setTvData] = useState([{genreTv: null }]);
 
