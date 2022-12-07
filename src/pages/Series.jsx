@@ -23,30 +23,6 @@ const { data : TvComedy } = useFetch(getTvComedy)
 const { data : TvDrama } = useFetch(getTvDrama)
 const { data : TvDocumentary } = useFetch(getTvDocumentary)
 
-
-// const urlGeneros = ` https://api.themoviedb.org/3/genre/tv/list?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US`
-
-// const [dataGeneros, setDataGeneros] = useState([])
-
-// const getGenres = async () => {
-//   const res = await axios.get(urlGeneros);
-//   const moviesDetails = res.data;
-//   setDataGeneros(moviesDetails)
-
-//   return moviesDetails;
-// };
-
-
-// useEffect(() => {
-//     getGenres();
-//   }, []);
-// console.log(dataGeneros)
-
-const urlGeneros = ` https://api.themoviedb.org/3/genre/tv/list?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US`
-
-
-
-
   return (<>
     <NavBar/>
 

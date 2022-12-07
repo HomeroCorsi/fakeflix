@@ -4,10 +4,6 @@ import netflixPlayButton from './netflixPlayButton.jpg'
 
 const PlayButton = ({navigateTrailer}) => {
 
-  // const url = "https://api.themoviedb.org/3/genre/movie/list?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US";
-  // const url2 = "https://api.themoviedb.org/3/genre/tv/list?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US"
-
-
 
   return (
     <button style={buttonStyle} onClick={navigateTrailer}>

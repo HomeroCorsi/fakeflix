@@ -15,11 +15,9 @@ const View =  () => {
     const [isLoading, setisLoading] = useState(false);
 
  
-    const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US`;
+    const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
 
     const getTrailer = async () => {
-        // const res =  await axios.get(url);
-        // setData(res.data.results[0].key);
 
          setisLoading(true);
          try{

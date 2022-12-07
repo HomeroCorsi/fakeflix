@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CategoriesMovies = ({item}) => {
 
-  const urlMovieGenres = `https://api.themoviedb.org/3/movie/${item.id}?api_key=c30ae912fb4c8df81ced17743c4657ea&language=en-US`
+  const urlMovieGenres = `https://api.themoviedb.org/3/movie/${item.id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
 
   const [movieData, setMovieData] = useState([{genreMovie: null }]);
   
