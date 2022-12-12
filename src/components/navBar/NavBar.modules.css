@@ -24,8 +24,8 @@
   }
   
   .nav_logo {
-    position: relative;
-    top: 10px;
+    position: fixed;
+    top: 5rem;
     left: 20px;
     width: 80px;
     cursor: pointer
