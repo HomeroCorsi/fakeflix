@@ -1,5 +1,5 @@
 .bannerprincipal{
-    
+    overflow: hidden;
     height: 80vh;
     /* background-image: `url(${item?.backdrop})`; */
     background-size: cover;

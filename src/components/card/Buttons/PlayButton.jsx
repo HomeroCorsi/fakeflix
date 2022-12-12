@@ -26,7 +26,7 @@ const buttonStyle = {
     height: '2rem',
     width: '2rem',
     borderRadius: '1rem',
-    zIndex:'999 !important'
+    // zIndex:'999 !important'
   }
 
   // onClick={()=>{wepa(); tuki()}}

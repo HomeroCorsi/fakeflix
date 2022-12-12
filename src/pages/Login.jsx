@@ -30,7 +30,7 @@ const Login = () => {
     const { email } = user;
     const data = {
       user: {
-        username: "nico",
+        username: "default",
         email: email,
       },
       token: "1233324125145",
