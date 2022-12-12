@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 2 !important;
     display: flex;
-    width: 100%;
+    width: 94%;
     padding: 20px;
     height: 20px;
     left: 0;
@@ -24,7 +24,7 @@
   }
   
   .nav_logo {
-    position: fixed;
+    position: relative;
     top: 10px;
     left: 20px;
     width: 80px;
