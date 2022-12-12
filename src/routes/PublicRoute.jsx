@@ -6,10 +6,10 @@ const PublicRoute = ({ children, url }) => {
     const {state} = useContext(AuthContext)
 
     if (!state.isAuth) {
-        return <Navigate to={url} />;
+        return children;
         }
         
-        return children;
+        return <Navigate to={url} />;
       
       };
 

@@ -38,7 +38,7 @@ export const AppRoutes = () => {
           exact
           path="/login"
           element={
-            <PublicRoute url={"/browse"}>
+            <PublicRoute url={"/Browse"}>
               <Login />
             </PublicRoute>
           }
