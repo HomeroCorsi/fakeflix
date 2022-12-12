@@ -5,9 +5,9 @@ import { AuthContext } from "../context/AuthContext";
 
 
 const ProtectedRoutes = ({ children, url }) => {
-  const { isAuth } = useContext(AuthContext);
+  const { state } = useContext(AuthContext);
 
-  if (isAuth) {
+  if (state.isAuth) {
     return children;
   }
 

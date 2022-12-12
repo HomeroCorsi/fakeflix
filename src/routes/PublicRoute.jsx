@@ -3,9 +3,9 @@ import { AuthContext } from '../context/AuthContext'
 import { Navigate } from 'react-router-dom';
 
 const PublicRoute = ({ children, url }) => {
-    const {isAuth} = useContext(AuthContext)
+    const {state} = useContext(AuthContext)
 
-    if (isAuth) {
+    if (!state.isAuth) {
         return <Navigate to={url} />;
         }
         

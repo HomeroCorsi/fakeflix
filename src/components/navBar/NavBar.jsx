@@ -7,7 +7,9 @@ import { TYPES } from "../../reducer/authReducer";
 const NavBar = () => {
   const navigate = useNavigate();
   const [scroll, setScroll] = useState(false);
-  const { dispatch } = useContext(AuthContext);
+  const { state, logout } = useContext(AuthContext);
+
+
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -17,16 +19,6 @@ const NavBar = () => {
     });
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    localStorage.clear()
-
-    dispatch({ type: TYPES.LOGOUT});
-
-    navigate("/Login", {
-      replace: false,
-    });
-  };
 
   const myListNavigate = () => {
   navigate('/myList')}
@@ -57,8 +49,8 @@ const NavBar = () => {
         <button className="navBarButton" onClick={moviesNavigate}>Películas</button>
       </div>
       <div className="NavDerecho">
-        <button className="navBarButton" >Bienvenidx {user.email} :) </button>
-        <button className="navBarButton" onClick={handleSubmit}>Salir</button>
+        <button className="navBarButton" >Bienvenidx {state.username} </button>
+        <button className="navBarButton" onClick={logout}>Salir</button>
         <img
           className="user"
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
