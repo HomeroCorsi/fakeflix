@@ -24,7 +24,8 @@
   
   .nav_logo {
     position: fixed;
-    left: 20px;
+    top: 10px;
+    left: 40px;
     width: 80px;
     cursor: pointer
   }
@@ -46,6 +47,14 @@
   .navBarButton:focus {
     outline: 0 !important;
 }
+.navBarButtonR{
+  font-weight: bold;
+  color: black;
+  border: none;
+  background: none;
+  outline: none;
+}
+
 .NavDerecho{
     display: flex;
     align-items: center;

@@ -40,7 +40,7 @@ const NavBar = () => {
       <div className="NavIzquierdo">
         <img
           className="nav_logo"
-          src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
+          src="https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_logo.png"
           alt="Netflix Logo"
           onClick={browseNavigate}
         />
@@ -49,8 +49,8 @@ const NavBar = () => {
         <button className="navBarButton" onClick={moviesNavigate}>Películas</button>
       </div>
       <div className="NavDerecho">
-        <button className="navBarButton" >Bienvenido/a {state.username} </button>
-        <button className="navBarButton" onClick={logout}>Salir</button>
+        <button className="navBarButtonR" >Bienvenido/a {state.username} </button>
+        <button className="navBarButtonR" onClick={logout}>Salir</button>
         <img
           className="user"
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
