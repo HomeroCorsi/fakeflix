@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import "./NavBar.modules.css";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { TYPES } from "../../reducer/authReducer";
+/* import { TYPES } from "../../reducer/authReducer"; */
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ const NavBar = () => {
         <button className="navBarButton" onClick={moviesNavigate}>Películas</button>
       </div>
       <div className="NavDerecho">
-        <button className="navBarButton" >Bienvenidx {state.username} </button>
+        <button className="navBarButton" >Bienvenido/a {state.username} </button>
         <button className="navBarButton" onClick={logout}>Salir</button>
         <img
           className="user"

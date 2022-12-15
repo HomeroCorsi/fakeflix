@@ -18,7 +18,7 @@ export const AppRoutes = () => {
         <Route
           path="*"
           element={
-            <ProtectedRoutes url={"/login"}>
+            <ProtectedRoutes url={"/"}>
               <Routes>
                 <Route exact path="/browse" element={<Browse />} />
                 <Route path="view/:id" element={<View />} />
@@ -36,7 +36,7 @@ export const AppRoutes = () => {
 
         <Route
           exact
-          path="/login"
+          path="/"
           element={
             <PublicRoute url={"/Browse"}>
               <Login />

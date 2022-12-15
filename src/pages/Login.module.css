@@ -52,7 +52,7 @@
   }
   button:focus,
   button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    outline: 2px auto -webkit-focus-ring-color;
   }
   
   /* LOGIN----------------------------------------------- */
@@ -95,8 +95,9 @@
       line-height: 50px;
       padding: 12px 18px 0;
     }
+
+    /* Button Login */
     .login_sing_in{
-      
       margin: 18px 0 12px;
       padding: 16px;
       color: white;
@@ -105,6 +106,13 @@
       border: none;
       border-radius: 4px;
     }
+    .login_sing_in:focus {
+      outline: 0 !important;
+    }
+    .login_sing_in:active {
+      background: #ff4538;
+    }
+
     .checkbox{
       margin-right: 10px;
     }

@@ -37,7 +37,7 @@ const PlusButtonTv = ({item}) => {
 export default PlusButtonTv;
 
 const StyledPlusButtonTv = styled.button`
-	border: 2px solid lightgrey;
+	border: 2px solid black;
 	background-color: #fff;
 	font-size: 16px;
 	height: 2rem;
@@ -51,7 +51,7 @@ const StyledPlusButtonTv = styled.button`
 	&:before {
 		content: "";
 		display: block;
-		background-color: grey;
+		background-color: black;
 		position: absolute;
 		top: 50%;
 		left: 50%;

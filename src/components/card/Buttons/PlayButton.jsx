@@ -18,7 +18,8 @@ export default PlayButton
 
 const buttonStyle = {
     backgroundImage: `url(${netflixPlayButton})`,
-    backgroundSize:"98%",
+    backgroundSize:"65%",
+    backgroundColor: "white",
     backgroundRepeat: "no-repeat",
     backgroundPosition: 'center',
      marginTop: '0.8rem',

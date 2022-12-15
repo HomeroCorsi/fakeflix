@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 2 !important;
     display: flex;
-    width: 95%;
+    width: 100%;
     padding: 20px;
     height: 20px;
     left: 0;
@@ -15,7 +15,6 @@
     /* backdrop-filter: blur(6px);  */
 
     /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); */
-
   }
   
   .nav_black {
@@ -25,7 +24,6 @@
   
   .nav_logo {
     position: fixed;
-    top: 2.5rem;
     left: 20px;
     width: 80px;
     cursor: pointer
@@ -40,7 +38,14 @@
     color: #fff;
     cursor: pointer;
     margin-right: 20px;
+    padding: 2px 15px 0px 15px;
+    border: none;
+    background: none;
+    outline: none;
   }
+  .navBarButton:focus {
+    outline: 0 !important;
+}
 .NavDerecho{
     display: flex;
     align-items: center;

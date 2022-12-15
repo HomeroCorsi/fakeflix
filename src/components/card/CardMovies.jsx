@@ -28,8 +28,8 @@ const [hover, setHover] = useState(false);
     <div
       style={{
         ...cardStyle,
-        transition: hover ? "all 0.3s ease-in-out" : null,
-        transform: hover ? 'scale(1.1)' : null,
+        transition: hover ? "all 250ms ease-in-out" : null,
+        transform: hover ? 'scale(1.05)' : null,
         
         backgroundImage: `url(https://image.tmdb.org/t/p/w500${item.backdrop})`,
       }}

@@ -50,9 +50,12 @@
 .button_grey{
 
     background: white;
-    font-size: 1.1rem;
+    color: #000;
+    font-size: 1.4rem;
 	border-radius: 2px;
     margin: 10px 10px 0px 0px;
+    border: none;
+    transition: ease-in-out 250ms;
 }
 
 .button_grey:hover{
