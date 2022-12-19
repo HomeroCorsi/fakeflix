@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 2 !important;
     display: flex;
-    width: 100%;
+    width: 97.5%;
     padding: 20px;
     height: 20px;
     left: 0;
@@ -24,8 +24,8 @@
   
   .nav_logo {
     position: fixed;
-    top: 10px;
-    left: 40px;
+    top: 3rem;
+    left: 20px;
     width: 80px;
     cursor: pointer
   }
@@ -48,11 +48,9 @@
     outline: 0 !important;
 }
 .navBarButtonR{
-  font-weight: bold;
-  color: black;
-  border: none;
-  background: none;
-  outline: none;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 .NavDerecho{
