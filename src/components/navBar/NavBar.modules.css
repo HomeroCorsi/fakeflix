@@ -7,8 +7,7 @@
     height: 20px;
     left: 0;
     justify-content: space-between;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+
     /* Animation */
     transition-timing-function: ease-in;
     transition: all 0.5s;
