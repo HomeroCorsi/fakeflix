@@ -5,8 +5,11 @@ import { TMDB } from '../config/tmdb';
 // import { moviesAdapter } from '../features/movies/utils/moviesAdapter';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+import styles from "../components/banner/Banner.module.css";
 
 const View =  () => {
+    const navigate = useNavigate();
     const params = useParams();
     const {id}=params;
 
@@ -36,6 +39,9 @@ const View =  () => {
 
       console.log(error)
 
+      const browseNavigate = () => {
+        navigate('/browse')}
+
   return (<>
        <div  
        style={{visibility: error === true ? 'visible' : 'hidden',
@@ -45,13 +51,23 @@ const View =  () => {
         width:'100%',
         height:'75%',
         fontSize:'5rem',
-       }} >Lo sentimos, no pudimos encontrar el video (Las series no poseen trailer)</div>
+       }} >Lo sentimos ... , no pudimos encontrar el video (Las series no poseen trailer)</div>
        
     <ReactPlayer url={`https://www.youtube.com/watch?v=${data}`}
      playing={true}
      width={'100%'}
      height={'75rem'} /> 
  
+
+       <button
+            className={styles.button_grey}
+         style={{
+              position: 'absolute',
+              margin: '1.5rem',
+              scale: '1.2',
+            }}
+            onClick={browseNavigate}
+       >Atrás</button>
 
 
 </>

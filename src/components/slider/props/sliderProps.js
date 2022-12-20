@@ -3,7 +3,7 @@ import { Navigation, Pagination } from "swiper";
 export const sliderProps = {
   // slidesPerView: 4,
   // slidesPerGroup: 4,
-  grabCursor: true,
+  grabCursor: false,
     breakpoints: {
       1440: {
         slidesPerView: 5,
@@ -25,15 +25,15 @@ export const sliderProps = {
         slidesPerView: 3,
         slidesPerGroup: 2,
       },
-      400: {
+      390: {
         slidesPerView: 1,
         slidesPerGroup: 1,
       }
   },
   scrollbar: false,
   navigation: true,
-  // pagination: {
-  //   clickable: true,
-  // },
+   pagination: {
+     clickable: true,
+   },
   modules: [Navigation, Pagination],
 }

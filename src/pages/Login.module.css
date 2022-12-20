@@ -64,16 +64,16 @@
       background: rgba(0, 0, 0, 0.90);
       border-radius: 6px;
       width: 500px;
-      height: 450px;
+      height: 440px;
       padding: 60px 68px 40px;
       
     }
     .login_title{
       font-size: 16px;
-      line-height: 1.1;
+      line-height: 1.4;
       display: flex;
       margin-bottom: 20px;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 600;
       color: white;
     }
@@ -93,7 +93,7 @@
       font-size: 1rem;
       color: white;
       line-height: 50px;
-      padding: 12px 18px 0;
+      padding: 5px 18px 0;
     }
 
     /* Button Login */
@@ -179,6 +179,7 @@
     }
     .logo_img:hover {
       filter: drop-shadow(0 0 10px #646cffaa);
+      transition: 0.5s;
     }
     .login_sing_in:hover{
       /* animation scale */
@@ -186,4 +187,31 @@
       transition: 0.5s;
       
      -webkit-transition: 0.5s;
+    }
+
+
+    @media screen and (max-width: 500px){
+      .logo_img{
+        height: 40px;
+        padding-left: 110px;
+      }
+      .Login_bodys{
+        justify-content: center;
+      }
+      .login{
+        width: 350px;
+        height: 380px;
+        padding: 35px 35px 35px;
+      }
+      .login_input{
+        line-height: 40px;
+      }
+
+      .footer_links{
+        font-size: 5px;
+        padding: 10px 10px 10px 10px;
+
+      }
+
+
     }

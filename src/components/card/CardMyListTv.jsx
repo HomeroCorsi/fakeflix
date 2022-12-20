@@ -103,10 +103,7 @@ const cardStyle = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-  
-  
-    
-  
+    margin: "20px",
   };
   
   const titleContainerStyle = {
@@ -124,11 +121,11 @@ const cardStyle = {
   };
   
   const bottomDiv = {
-    
-    height: '45%',
+  
+    height: '85%',
     width: '95%',
-    background: 'black',
-    marginTop: '5rem',
+    background: ' rgba(0,0,0,0.85)',
+    marginTop: '0.25rem',
     marginLeft: '0.75rem',
     // zIndex: '700',
   }
