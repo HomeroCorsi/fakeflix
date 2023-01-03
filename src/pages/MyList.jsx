@@ -4,6 +4,7 @@ import { MoviesIdContext } from '../context/MoviesIdContext';
 import { TvIdContext } from '../context/TvIdContext';
 import SliderMyListMovies from '../components/slider/SliderMyListMovies';
 import SliderMyListTv from '../components/slider/SliderMyListTv';
+import Footer from '../components/footer/Footer';
 
 export const MyList = () => {
 
@@ -19,6 +20,7 @@ const {TvId} = useContext(TvIdContext)
         <div style={titleStyle}>Mis programas de televisión</div>
         <SliderMyListTv items={TvId}/>
         </div>
+        <Footer/>
     </>
   )
 }

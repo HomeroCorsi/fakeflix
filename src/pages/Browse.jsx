@@ -9,6 +9,7 @@ import getTopRatedSeries from "../features/series/utils/getTopRatedSeries";
 import NavBar from "../components/navBar/NavBar";
 import './Browse.module.css'
 import SliderTv from "../components/slider/SliderTv";
+import Footer from "../components/footer/Footer";
 
 const Browse = () => {
   const { data : popularMovies} = useFetch(getPopularMovies);
@@ -49,8 +50,14 @@ const Browse = () => {
       <div style={titleStyle}>Series más vistas</div>
       <SliderTv items={popularSeries} />
       <div style={titleStyle}>Series mejor valoradas</div>
-      <SliderTv items={TopRatedSeries} />
+      <SliderTv items={TopRatedSeries} />      
+      
+            <Footer/>
       </div>
+      
+
+
+      
     </>
   );
 };

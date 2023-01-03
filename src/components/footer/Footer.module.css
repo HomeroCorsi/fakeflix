@@ -1,0 +1,61 @@
+.footery {  
+    background: rgba(000, 000, 000, 0.90);
+  
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin-top: 8.5rem;
+    margin-bottom: 0px;
+  }
+  .footer_question{
+    color: #B3B3B3;
+    font-size: 0.9rem;
+    opacity: 1;
+    display: block;
+  }
+  .footer_links{
+    color: #B3B3B3;
+    font-size: 0.9rem;
+    opacity: 1;
+    margin-right: 10px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .center{
+    width: 700px;
+    height: 120px;
+  }
+  #root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .logo_img{
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .logo {
+    position: absolute;
+    align-self: flex-start;
+    left: 10px;
+    top: 10px;
+  }
+  .logo_img:hover {
+    filter: drop-shadow(0 0 10px #646cffaa);
+  }
+  .login_sing_in:hover{
+    /* animation scale */
+    transform: scale(1.05);
+    transition: 0.5s;
+    
+   -webkit-transition: 0.5s;
+  }
