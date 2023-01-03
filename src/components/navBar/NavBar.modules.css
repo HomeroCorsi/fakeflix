@@ -48,12 +48,12 @@
   .navBarButton:focus {
     outline: 0 !important;
 }
-.navBarButtonR{
+/* .navBarButtonR{
   color: #fff;
   cursor: pointer;
   margin-right: 20px;
 }
-
+ */
 .NavDerecho{
     display: flex;
     align-items: center;
