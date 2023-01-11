@@ -69,13 +69,13 @@ const [hover, setHover] = useState(false);
 export default CardTv;
 
 const cardStyle = {
-height: "150px",
-  width: "300px",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-
-};
+  height: "150px",
+    width: "300px",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    margin: "20px",
+  };
 
 const titleContainerStyle = {
   height: "50%",
@@ -93,11 +93,10 @@ const titleStyle = {
 
 const bottomDiv = {
   
-  height: '45%',
+  height: '85%',
   width: '95%',
-  background: 'black',
-  marginTop: '5rem',
+  background: ' rgba(0,0,0,0.85)',
+  marginTop: '0.25rem',
   marginLeft: '0.75rem',
   // zIndex: '700',
 }
-
