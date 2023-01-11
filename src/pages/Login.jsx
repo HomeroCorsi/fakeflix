@@ -13,7 +13,7 @@ const Login = () => {
       <div className={styles.container}>
         <a className={styles.logo}>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+            src="https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_logo.png"
             alt="logo"
             className={styles.logo_img}
           />
